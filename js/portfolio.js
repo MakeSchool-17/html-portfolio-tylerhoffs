@@ -1,9 +1,13 @@
 $( document ).ready(function() {
     //alert('hello');
     $('#gallery').justifiedGallery({
-       rowHeight : 300,
+       rowHeight : 200,
        lastRow : 'justify',
-       margins : 3,
+       margins : 6,
        randomize: true
+     }).on('jg.complete', function () {
+          $('#gallery a').swipebox({
+          	hideBarsDelay : false
+          });
      });
 });
